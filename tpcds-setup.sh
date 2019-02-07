@@ -70,7 +70,7 @@ hadoop fs -chmod -R 777  ${DIR}/${SCALE}
 
 echo "TPC-DS text data generation complete."
 
-HIVE="beeline -n hive -u 'jdbc:hive2://zk0-qq19.210u1watl4kuvfje1lvepmbvvc.cx.internal.cloudapp.net:2181,zk1-qq19.210u1watl4kuvfje1lvepmbvvc.cx.internal.cloudapp.net:2181,zk4-qq19.210u1watl4kuvfje1lvepmbvvc.cx.internal.cloudapp.net:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2-hive2' "
+HIVE="beeline -n hive -u 'jdbc:hive2://zk1-qq19.cqohdctqhnpu5instdakmsyjld.cx.internal.cloudapp.net:2181,zk3-qq19.cqohdctqhnpu5instdakmsyjld.cx.internal.cloudapp.net:2181,zk4-qq19.cqohdctqhnpu5instdakmsyjld.cx.internal.cloudapp.net:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2-hive2' "
 
 # Create the text/flat tables as external tables. These will be later be converted to ORCFile.
 echo "Loading text data into external tables."
